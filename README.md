@@ -16,7 +16,7 @@ Cloud Flow 前端样板工程，基于 React 开发，已经集成以下特性
 ## 克隆
 
 ```sh
-git clone https://github.com/SongshuA/cloud-flow-sample-project.git
+git clone https://github.com/cloudflow-repo/cloud-flow-sample-project.git
 ```
 
 
