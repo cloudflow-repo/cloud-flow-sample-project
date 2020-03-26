@@ -1,0 +1,15 @@
+# darwin
+.DS_Store
+
+
+# output
+**/out/
+**/dist/
+yarn-error.log
+/yarn.lock
+/config.json
+/package-lock.json
+
+
+# nodejs
+**/node_modules/
