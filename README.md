@@ -20,6 +20,28 @@ git clone https://github.com/cloudflow-repo/cloud-flow-sample-project.git
 ```
 
 
+## 命令
+
+编译
+```bash
+yarn build
+
+# 或者
+
+npm run build
+```
+
+
+
+开启 devServer
+```bash
+yarn dev
+
+# 或者
+
+npm run dev
+```
+
 ## 目录结构
 
 ```
