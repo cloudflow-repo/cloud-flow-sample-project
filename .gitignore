@@ -7,8 +7,8 @@
 **/dist/
 yarn-error.log
 /yarn.lock
-/config.json
 /package-lock.json
+/dist.zip
 
 
 # nodejs

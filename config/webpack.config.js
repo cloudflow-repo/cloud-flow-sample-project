@@ -3,6 +3,7 @@
  * 无论是开发环境还是生产环境都会应用此文件中的配置
  */
 
+const utils = require('./utils');
 const path = require('path');
 const merge = require('webpack-merge');
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
@@ -13,6 +14,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const root = path.join(__dirname, '../');
 const NODE_ENV = process.env.NODE_ENV || 'production';
+
+const outerConfig = utils.getOuterConfig();
 
 
 /**
@@ -32,7 +35,8 @@ const basicConfig = {
   output: {
     path: path.join(root, 'dist'),
     filename: '[name].[hash:8].js',
-    chunkFilename: '[name].[hash:8].bundle.js'
+    chunkFilename: '[name].[hash:8].bundle.js',
+    publicPath: outerConfig.publicPath
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],

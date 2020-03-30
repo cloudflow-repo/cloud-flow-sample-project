@@ -19,10 +19,36 @@ Cloud Flow 前端样板工程，基于 React 开发，已经集成以下特性
 git clone https://github.com/cloudflow-repo/cloud-flow-sample-project.git
 ```
 
+## 配置
+
+对于 Cloud Flow用户，克隆后请编辑根目录的 `config.json` 文件，将 `publicPath` 修改为 `<Cloud Flow 网址>/pages/<工程标识符>`，例如：
+
+此举是为了能正确索引到前端资源文件
+
+```json
+{
+  "publicPath": "/cloud-flow/pages/test/"
+}
+```
+
+
+
 
 ## 命令
 
-编译
+编译并生成 zip归档
+```bash
+yarn build & yarn zip
+
+# 或者
+
+npm run build & npm run zip
+```
+
+生成的zip归档名为 `dist.zip`，可在工程管理页面上传
+
+
+只编译不压缩
 ```bash
 yarn build
 
@@ -63,5 +89,6 @@ npm run dev
 │   ├── index.tsx
 │   └── app.tsx
 │
-├── tsconfig.json
+├── config.json（工程全局配置）
+└── tsconfig.json
 ```
