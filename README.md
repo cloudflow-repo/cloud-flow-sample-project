@@ -50,7 +50,7 @@ yarn build & yarn zip
 npm run build & npm run zip
 ```
 
-生成的zip归档名为 `dist.zip`，可在工程管理页面上传
+生成的zip归档名为 `dist.zip`，可在"Pages 服务"页面上传
 
 
 只编译不压缩
