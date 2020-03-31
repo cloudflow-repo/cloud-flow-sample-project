@@ -16,18 +16,23 @@ Cloud Flow 前端样板工程，基于 React 开发，已经集成以下特性
 ## 克隆
 
 ```sh
-git clone https://github.com/cloudflow-repo/cloud-flow-sample-project.git
+git clone https://github.com/cloudflow-repo/cloud-flow-sample-project.git your-project-name
 ```
 
 ## 配置
 
-对于 Cloud Flow用户，克隆后请编辑根目录的 `config.json` 文件，将 `publicPath` 修改为 `<Cloud Flow 网址>/pages/<工程标识符>`，例如：
+对于 Cloud Flow用户，克隆后请编辑 `/config/webpack.config.js` 文件，将 `publicPath` 修改为 `<Cloud Flow 路径>/pages/<工程标识符>`，例如：
 
 此举是为了能正确索引到前端资源文件
 
-```json
+```js
 {
-  "publicPath": "/cloud-flow/pages/test/"
+  output: {
+    /**
+     * Cloud Flow 用户请修改此字段以保证线上页面正确索引到前端资源文件
+     */
+    publicPath: '/cloud-flow/pages/<PROJECT_IDENTIFIER>/'
+  },
 }
 ```
 
@@ -89,6 +94,5 @@ npm run dev
 │   ├── index.tsx
 │   └── app.tsx
 │
-├── config.json（工程全局配置）
 └── tsconfig.json
 ```

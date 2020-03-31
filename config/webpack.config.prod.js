@@ -7,6 +7,12 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   devtool: false,
+  output: {
+    /**
+     * Cloud Flow 用户请修改此字段以保证线上页面正确索引到前端资源文件
+     */
+    // publicPath: '/cloud-flow/pages/<PROJECT_IDENTIFIER>/'
+  },
   optimization: {
     runtimeChunk: {
       name: "manifest"
